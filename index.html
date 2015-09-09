@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="UTF-8" />
+	<title>Grievances || Appeals</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="Healthcare Appeals and Grievances" name="description" />
+	<meta content="Sky Solutions" name="author" />	  
+    <!--stylesheets / link tags loaded here-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" rel="stylesheet" />
+    
+    <style>
+        body {
+            padding-top: 120px;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        .myfont {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>  
+  <div class="container" id="navId">              
+  </div>      
+
+    <div class="container">     
+        <div class="row">
+          <div class="col-xs-12 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-4 col-sm-12 col-sm-4 col-md-12 col-md-4 col-lg-12 col-lg-4">                
+                <div class="panel panel-primary"><div class="panel-heading">Sign In to HAGM</div>
+                 <div class="panel-body">
+                    <form role="form">
+                         <div class="form-group">                              
+                           <input type="email" class="form-control input-sm" id="emailId" placeholder="Email" required>                        
+                         </div>
+                         <div class="form-group">                              
+                           <input type="password" class="form-control input-sm" id="passwordId" placeholder="Password" required>    
+                            </input>                            
+                         </div>                         
+                         <div class="myfont"><input type="checkbox"> Remember me</div>
+                     <button type="submit" class="btn btn-primary">
+                          <span class="fa fa-sign-in"></span> 
+                          Log In
+                      </button>
+                    </form>    
+                </div>
+                <div class="panel-footer">  
+                    <table class="table table-striped">                        
+                        <tbody><tr><td><p class="text-left myfont">Forgot your password?</p></td>
+                              <td><button type="submit" class="btn btn-primary input-sm" onclick="goToResetPage()">
+                      <span class="fa fa-share-square-o"></span> 
+                      Reset
+                    </button></td></tr>
+                        <tr><td><p class="text-left myfont">Don't have an account yet?</p></td>
+                              <td><button type="submit" class="btn btn-primary input-sm" onclick="goToRegisterPage()">
+                      <span class="fa fa-pencil-square-o"></span> 
+                      Register
+                    </button></td></tr>
+                    </tbody>
+                    </table>                    
+                </div>                
+          </div>        
+        </div>
+    </div>
+        
+  
+<!-- /.container -->
+  
+  <script>
+  
+    // sandbox disable popups
+    if (window.self !== window.top && window.name!="view1") {;
+      window.alert = function(){/*disable alert*/};
+      window.confirm = function(){/*disable confirm*/};
+      window.prompt = function(){/*disable prompt*/};
+      window.open = function(){/*disable open*/};
+    }
+    
+    // prevent href=# click jump
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.getElementsByTagName("A");
+      for(var i=0; i < links.length; i++) {
+        if(links[i].href.indexOf('#')!=-1) {
+          links[i].addEventListener("click", function(e) {
+          console.debug("prevent href=# click");
+              if (this.hash) {
+                if (this.hash=="#") {
+                  e.preventDefault();
+                  return false;
+                }
+                else {
+                  /*
+                  var el = document.getElementById(this.hash.replace(/#/, ""));
+                  if (el) {
+                    el.scrollIntoView(true);
+                  }
+                  */
+                }
+              }
+              return false;
+          })
+        }
+      }
+    }, false);
+    
+  
+  </script>
+  
+  <!--scripts loaded here-->  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>     
+    
+  <script>
+      // Custom scripting goes here    
+      function goToResetPage() {
+          document.location.href = "reset.html";
+      }
+      function goToRegisterPage() {
+          document.location.href = "register.html";
+      }
+      $("#navId").load("nav.html"); 
+  </script>
+</body>
+</html>
