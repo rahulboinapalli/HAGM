@@ -49,31 +49,62 @@
                 <div class="panel panel-primary"><div class="panel-heading">Register in HAGM</div>
                  <div class="panel-body">
                     <form role="form">
-                         <div class="form-group">                              
-                            <input type="text" class="form-control input-sm" id="fullNameId" placeholder="Full Name" autocomplete="on" required>
+                         <div class="form-group">                                                         
+                              <div class="input-group">
+                               <span class="input-group-addon"><i class="fa fa-user-secret fa-fw"></i></span>
+                               <input type="text" class="form-control input-sm" id="fullNameId" placeholder="Full Name" autocomplete="on" required>
+                             </div>
                          </div>
-                         <div class="form-group">                              
-                            <input type="email" class="form-control input-sm" id="emailId" placeholder="Email" required>
+                         <div class="form-group">                                                          
+                             <div class="input-group margin-bottom-sm">
+                               <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                               <input type="email" class="form-control" id="emailId" placeholder="Email" required>  
+                            </div>
                          </div>
-                         <div class="form-group">                              
-                            <input type="text" class="form-control input-sm" id="addressId" placeholder="Address" autocomplete="on" required>
+                         <div class="form-group">                                
+                                <div class="input-group">
+                                    <span class="myfont" style="background: white;font-weight: bold;">Gender:&nbsp;&nbsp;</span>   
+                                   <input type="radio" name="gender" style="padding-left: 10px;"> <i class="fa fa-male fa-fw"></i> 
+                                    <input type="radio" name="gender"> <i class="fa fa-female fa-fw"></i>
+                                </div>                                    
+                         </div>
+                         <div class="form-group">                                                          
+                             <div class="input-group">
+                               <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
+                              <input type="text" class="form-control input-sm" id="addressId" placeholder="Address" autocomplete="on" required>
+                             </div>
                          </div>     
-                         <div class="form-group">                              
-                            <input type="text" class="form-control input-sm" id="cityId" placeholder="City/Town" autocomplete="on" required>
+                         <div class="form-group">                                                          
+                              <div class="input-group">
+                               <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
+                               <input type="text" class="form-control input-sm" id="cityId" placeholder="City/Town" autocomplete="on" required>
+                             </div>
                          </div>  
-                         <div class="form-group">                              
-                            <input type="text" class="form-control input-sm" id="countryId" placeholder="Country" autocomplete="on" required>
+                         <div class="form-group">                                                          
+                              <div class="input-group">
+                               <span class="input-group-addon"><i class="fa fa-globe fa-fw"></i></span>
+                               <input type="text" class="form-control input-sm" id="countryId" placeholder="Country" autocomplete="on" required>
+                             </div>
                          </div>  
-                         <div class="form-group">                              
-                            <input type="text" class="form-control input-sm" id="usernameId" placeholder="Username" autocomplete="on" required>
+                         <div class="form-group">                                                         
+                             <div class="input-group">
+                               <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                <input type="text" class="form-control input-sm" id="usernameId" placeholder="Username" autocomplete="on" required>
+                             </div>
                          </div>  
-                         <div class="form-group">                              
-                            <input type="text" class="form-control input-sm" id="passwordId" placeholder="Password"  autocomplete="on" required>
+                         <div class="form-group">                                                          
+                             <div class="input-group">
+                               <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                <input type="text" class="form-control input-sm" id="passwordId" placeholder="Password"  autocomplete="on" required>
+                             </div>
                          </div>
-                         <div class="form-group">                              
-                            <input type="text" class="form-control input-sm" id="retypePasswordId" placeholder="Retype Password" autocomplete="on" required>
+                         <div class="form-group">                                                         
+                             <div class="input-group">
+                               <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                 <input type="text" class="form-control input-sm" id="retypePasswordId" placeholder="Retype Password" autocomplete="on" required>
+                             </div>
                          </div>
-                        <div class="myfont">
+                        <div>
                           <input type="checkbox" id="agreeId"> I agree to the Terms of Service and Privacy Policy
                         </div>    
                         <div>
@@ -99,7 +130,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>     
         
   <!-- Start: When this static pages are made dynamic please following navigation in the seperate file and include it --->
-  <div class="footer myfont" style="padding-top: 50px;">
+  <div class="footer" style="padding-top: 50px;">
       <div class="row">
           <div class="col-xs-12 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 col-lg-offset-4 col-sm-12 col-sm-5 col-md-12 col-md-5 col-lg-12 col-lg-5">                              
 		<b>Copyright <i class="fa fa-copyright"></i>
